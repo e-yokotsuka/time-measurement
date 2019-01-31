@@ -1,0 +1,12 @@
+{
+  "name": "time-masurement",
+  "description": "time masurement module",
+  "main": "index.js",
+  "author": "e.yokotsuka",
+  "keywords": [
+    "time",
+    "masurement"
+  ], 
+  "license": "MIT",
+  "version": "0.0.1"
+}
