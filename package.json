@@ -3,6 +3,9 @@
   "description": "time-masurement",
   "main": "index.js",
   "author": "e.yokotsuka",
+  "engines" : { 
+    "node" : ">= 8.5"
+  },
   "keywords": [
     "time",
     "masurement"

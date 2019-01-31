@@ -1,4 +1,5 @@
 'use strict';
+const {performance} = require('perf_hooks');
 module.exports = (func = () => {}, name = "") => {
   const startTime = performance.now();
   func();
