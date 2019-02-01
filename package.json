@@ -1,6 +1,6 @@
 {
-  "name": "time-masurement",
-  "description": "time-masurement",
+  "name": "time-measurement",
+  "description": "time-measurement",
   "main": "lib/index.js",
   "author": "e.yokotsuka",
   "engines": {
@@ -14,14 +14,14 @@
   },
   "keywords": [
     "time",
-    "masurement"
+    "measurement"
   ],
   "files": [
     "lib/"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/otosan/time-masurement.git"
+    "url": "https://github.com/otosan/time-measurement.git"
   },
   "license": "MIT",
   "version": "0.0.2",
