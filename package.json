@@ -1,15 +1,36 @@
 {
   "name": "time-masurement",
   "description": "time-masurement",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "e.yokotsuka",
-  "engines" : { 
-    "node" : ">= 8.5"
+  "engines": {
+    "node": ">= 8.5"
+  },
+  "scripts": {
+    "build": "babel src/ --out-dir lib/ --source-maps",
+    "watch": "babel src/ --out-dir lib/ --watch --source-maps",
+    "test": "mocha test/ --require @babel/register --timeout 10000",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "time",
     "masurement"
-  ], 
+  ],
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otosan/time-masurement.git"
+  },
   "license": "MIT",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "mocha": "^5.2.0"
+  }
 }
