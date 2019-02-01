@@ -1,5 +1,5 @@
 import assert from "assert";
-import TimeMasurement from "../src/index"
+import TimeMasurement from "../src/index";
 
 const tm = new TimeMasurement(console.log);
 const OneSeconds = ( v = "" ) => new Promise(resolve => setTimeout(() => { resolve(v) }, 1000));
