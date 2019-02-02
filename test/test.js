@@ -1,7 +1,7 @@
 import assert from "assert";
-import TimeMasurement from "../src/index";
+import TimeMeasurement from "../src/index";
 
-const tm = new TimeMasurement(console.log);
+const tm = new TimeMeasurement(console.log);
 const OneSeconds = ( v = "" ) => new Promise(resolve => setTimeout(() => { resolve(v) }, 1000));
 const AsyncTest = async () => {
     const hoge = await OneSeconds("O");
@@ -41,7 +41,7 @@ describe('Test', () => {
             let s = "";
             for(let i = 0;i < 20000;i++) for(let ii = 0;ii < 20000;ii++) s = `${s}${s}`;
         },
-        "masurement Simple");
+        "Simple");
     });
 
 });

@@ -1,2 +1,2 @@
-# time-masurement
-time-masurement
+# time-measurement
+time-measurement

@@ -1,6 +1,7 @@
 import { performance } from "perf_hooks";
 
-class TimeMasurement
+class TimeMeasurement
+
 {
     logOutFunc = text =>{ throw text }
     measuringPoints = new Map();
@@ -22,4 +23,5 @@ class TimeMasurement
     EndMeasurement = (pointName = "") => this.logOutFunc(`${pointName} = ${Math.round(performance.now() - this.measuringPoints.get(pointName))} msec`);
 }
 
-export default TimeMasurement;
+export default TimeMeasurement
+;
