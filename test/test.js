@@ -2,11 +2,11 @@ import assert from "assert";
 import TimeMeasurement from "../src/index";
 
 const tm = new TimeMeasurement(console.log);
-const OneSeconds = ( v = "" ) => new Promise(resolve => setTimeout(() => { resolve(v) }, 1000));
+const OneSecond = ( v = "" ) => new Promise(resolve => setTimeout(() => { resolve(v) }, 1000));
 const AsyncTest = async () => {
-    const hoge = await OneSeconds("O");
+    const hoge = await OneSecond("O");
     tm.EndMeasurement();
-    const fuge = await OneSeconds("K");
+    const fuge = await OneSecond("K");
     tm.EndMeasurement();
     return `${hoge}${fuge}`;
 }
@@ -21,14 +21,14 @@ describe('Test', () => {
 
     it('Default Timer', async () => {
         tm.EndMeasurement();
-        let r = await OneSeconds("ONE");
+        let r = await OneSecond("ONE");
         assert.ok(r === "ONE");
         tm.EndMeasurement();
     });
 
     it('Nest', async () => {
         tm.StartMeasurement("Test2");
-        await OneSeconds();
+        await OneSecond();
         tm.StartMeasurement("Test1");
         const r = await AsyncTest();
         assert.ok(r === "OK");
